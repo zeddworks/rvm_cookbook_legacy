@@ -10,11 +10,8 @@ action :create do
 
       environment = "#{ruby_string}@#{gemset}"
 
-      puts gemset.class
-
       current=RVM::Environment.current
-      rvm_strings = current.list_strings()
-
+      rvm_strings = current.list_strings
 
       if rvm_strings.select { |rvm_string| ! rvm_string.scan(ruby_string).empty? }.empty? then
         current.install ruby_string
