@@ -1,6 +1,7 @@
 action :create do
   ruby_block "install ruby" do
     block do
+
       require 'rubygems'
       require 'rvm'
 
