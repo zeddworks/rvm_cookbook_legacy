@@ -8,7 +8,7 @@ action :create do
       if new_resource.gemset.nil?
         environment = "#{new_resource.ruby_string}"
       else
-        environment = "#{new_resource.ruby_string}@#{new_resource.vemset}"
+        environment = "#{new_resource.ruby_string}@#{new_resource.gemset}"
       end
 
       current=RVM::Environment.current
